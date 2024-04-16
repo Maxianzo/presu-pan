@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Total</title>
+</head>
+<body>
+    <h1>Calculadora de Total</h1>
+    <form id="formulario" style="    padding: 7px;
+    /* margin: 34px; */
+    border-radius: 57px;
+    box-shadow: 10px 10px 10px 0 #000;
+    border: 3px inset #000;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;">
+        <label for="producto1">Pan de pancho:</label><br>
+        <input type="number" id="producto1" class="producto" min="0" value="0"><br>
+        <br>
+        <label for="producto2">Pan de hamburguesa:</label>
+        <br><input type="number" id="producto2" class="producto" min="0" value="0"><br>
+        <br>
+        <label for="producto3">Pan lactal blanco:</label>
+        <br><input type="number" id="producto3" class="producto" min="0" value="0"><br>
+        <br>
+        <label for="producto4">Pan lactal negro:</label>
+        <br><input type="number" id="producto4" class="producto" min="0" value="0"><br>
+        <br>
+        <label for="producto5">Pan de arabe:</label>
+        <br><input type="number" id="producto5" class="producto" min="0" value="0"><br>
+        <br>
+        <label for="producto6">Prepizza:</label>
+        <br><input type="number" id="producto6" class="producto" min="0" value="0"><br>
+        <br>
+        <label for="producto7">Anis de 12:</label>
+        <br><input type="number" id="producto7" class="producto" min="0" value="0"><br>
+        <br>
+        <label for="producto8">Anis de 24:</label>
+        <br><input type="number" id="producto8" class="producto" min="0" value="0"><br>
+        <br>
+        <label for="producto9">tostadas de 1kg:</label>
+        <br><input type="number" id="producto9" class="producto" min="0" value="0"><br>
+        <br>
+        <label for="producto10">alfajor glaciado</label>
+        <br><input type="number" id="producto10" class="producto" min="0" value="0"><br>
+        <br>
+        
+        <label for="producto11">alfajor de miel</label>
+        <br><input type="number" id="producto11" class="producto" min="0" value="0"><br>
+        
+<br>
+        <label for="producto12">alfajor de maizena</label>
+    <br>    <input type="number" id="producto12" class="producto" min="0" value="0"><br>
+        <br>
+
+        <label for="producto13">alfajor chocolate</label>
+        <br><input type="number" id="producto13" class="producto" min="0" value="0"><br>
+        
+
+
+
+
+        <input type="submit" value="Calcular Total">
+    </form>
+
+    <div id="resultado">
+        <h2>Resultado:</h2>
+        <table id="tablaResultados" style="padding: 7px;margin: 34px;border-radius: 29px;box-shadow: 10px 10px 10px 0 #000;border: 3px inset #000;font-size: 15px;text-transform: uppercase;text-align: center;">
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio unitario ($)</th>
+                <th>Total ($)</th>
+            </tr>
+        </table>
+        <p id="total" style="padding: 7px;
+    margin: 34px;
+    border-radius: 57px;
+    box-shadow: 10px 10px 10px 0 #000;
+    border: 3px inset #000;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;">El total de la compra es: $0</p>
+    </div>
+
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var precios = [550, 550, 780, 780, 890, 1050, 1540, 2400, 3130, 7785,5475,5475,6440];
+            var productos = document.getElementsByClassName('producto');
+            var total = 0;
+
+            var tablaResultados = document.getElementById('tablaResultados');
+            tablaResultados.innerHTML = '<tr><th>Producto</th><th>Cantidad</th><th>Precio unitario ($)</th><th>Total ($)</th></tr>';
+
+            for (var i = 0; i < precios.length; i++) {
+                var cantidad = parseInt(productos[i].value);
+                var subtotal = cantidad * precios[i];
+                total += subtotal;
+
+                var fila = '<tr>';
+                fila += '<td>Producto ' + (i + 1) + '</td>';
+                fila += '<td>' + cantidad + '</td>';
+                fila += '<td>' + precios[i] + '</td>';
+                fila += '<td>' + subtotal + '</td>';
+                fila += '</tr>';
+
+                tablaResultados.innerHTML += fila;
+            }
+
+            document.getElementById('total').innerText = 'El total de la compra es: $' + total;
+        });
+    </script>
+</body>
+</html>
+
+
+
