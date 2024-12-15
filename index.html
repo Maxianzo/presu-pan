@@ -5,185 +5,224 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Total</title>
     <style>
-#formulario {padding: 17px;
-    border-radius: 57px;
-    box-shadow: 10px 10px 10px 0 #000;
-    border: 3px inset #000;
-    font-size: 15px;
-    text-transform: uppercase;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
-}
+        #formulario {
+            padding: 17px;
+            border-radius: 57px;
+            box-shadow: 10px 10px 10px 0 #000;
+            border: 3px inset #000;
+            font-size: 15px;
+            text-transform: uppercase;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+        }
 
-#formulario h1 {width: 100%;
-    margin: 0;
-    padding: 10px;
-    font-size: 24px;
-    background-color: #F0F00A;
-    border-bottom: 3px solid #000;
-    text-align: center;
-    border-radius: 37px;
-}
+        #formulario h1 {
+            width: 100%;
+            margin: 0;
+            padding: 10px;
+            font-size: 24px;
+            background-color: #F0F00A;
+            border-bottom: 3px solid #000;
+            text-align: center;
+            border-radius: 37px;
+        }
 
-#formulario div {
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-}
+        #formulario div {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
 
-#formulario label {
-    display: block;
-    margin-bottom: 5px;
-}
+        #formulario label {
+            display: block;
+            margin-bottom: 5px;
+        }
 
-#formulario input[type="number"] {
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
-    border-radius: 57px;
-}
+        #formulario input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            border-radius: 57px;
+        }
 
-#formulario .submit-container {
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centra el contenido del contenedor */
-    margin-top: 20px; /* Espacio opcional para separar el botón del resto del contenido */
-}
+        #formulario .submit-container {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Centra el contenido del contenedor */
+            margin-top: 20px; /* Espacio opcional para separar el botón del resto del contenido */
+        }
 
-#formulario .submit-container input[type="submit"] {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 30px;
-    border: 3px solid #000;
-    background-color: #f0f0f0; /* Color de fondo opcional */
-    cursor: pointer;
-}
+        #formulario .submit-container input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 30px;
+            border: 3px solid #000;
+            background-color: #f0f0f0; /* Color de fondo opcional */
+            cursor: pointer;
+        }
 
-#tablaResultados, #total {
-    padding: 7px;
-    margin: 34px;
-    border-radius: 29px;
-    box-shadow: 10px 10px 10px 0 #000;
-    border: 3px inset #000;
-    font-size: 15px;
-    text-transform: uppercase;
-    text-align: center;
-}
+        #tablaResultados, #total {
+            padding: 7px;
+            margin: 34px;
+            border-radius: 29px;
+            box-shadow: 10px 10px 10px 0 #000;
+            border: 3px inset #000;
+            font-size: 15px;
+            text-transform: uppercase;
+            text-align: center;
+        }
 
-@media (min-width: 600px) {
-    #formulario div {
-        width: 45%;
-    }
-}
-
+        @media (min-width: 600px) {
+            #formulario div {
+                width: 45%;
+            }
+        }
     </style>
 </head>
 <body>
     <h1>Presupueste su pedido</h1>
     <form id="formulario">
-        <!-- Productos existentes -->
-       <H1>Via Canell</h1>
+        <h1>Via Canell</h1>
         <div>
             <label for="producto1">Pan de pancho:</label>
-            <input type="number" id="producto1" class="producto" >
+            <input type="number" id="producto1" class="producto">
         </div>
         <div>
             <label for="producto2">Pan de hamburguesa:</label>
-            <input type="number" id="producto2" class="producto" >
+            <input type="number" id="producto2" class="producto">
         </div>
         <div>
             <label for="producto3">Pan lactal blanco:</label>
-            <input type="number" id="producto3" class="producto" >
+            <input type="number" id="producto3" class="producto">
         </div>
         <div>
             <label for="producto4">Pan lactal negro:</label>
-            <input type="number" id="producto4" class="producto" >
+            <input type="number" id="producto4" class="producto">
         </div>
         <div>
             <label for="producto5">Pan de arabe:</label>
-            <input type="number" id="producto5" class="producto" >
+            <input type="number" id="producto5" class="producto">
         </div>
         <div>
             <label for="producto6">Prepizza:</label>
-            <input type="number" id="producto6" class="producto" >
+            <input type="number" id="producto6" class="producto">
         </div>
         <div>
             <label for="producto7">Anis de 12:</label>
-            <input type="number" id="producto7" class="producto" >
+            <input type="number" id="producto7" class="producto">
         </div>
         <div>
             <label for="producto8">Anis de 24:</label>
-            <input type="number" id="producto8" class="producto" >
+            <input type="number" id="producto8" class="producto">
         </div>
         <div>
             <label for="producto9">Tostadas de 1kg:</label>
-            <input type="number" id="producto9" class="producto" >
+            <input type="number" id="producto9" class="producto">
         </div>
         <div>
             <label for="producto10">Alfajor glaciado:</label>
-            <input type="number" id="producto10" class="producto" >
+            <input type="number" id="producto10" class="producto">
         </div>
         <div>
             <label for="producto11">Alfajor de maizena/miel:</label>
-            <input type="number" id="producto11" class="producto" >
+            <input type="number" id="producto11" class="producto">
         </div>
-         <div>
+      
+        <div>
             <label for="producto13">Alfajor chocolate:</label>
-            <input type="number" id="producto13" class="producto" >
+            <input type="number" id="producto13" class="producto">
         </div>
         <h1 style="margin: auto;">Portal del Sol</h1>
-        <div>
+          <div>
             <label for="producto12">Roscas glaciadas:</label>
-            <input type="number" id="producto12" class="producto" >
+            <input type="number" id="producto12" class="producto">
         </div>
-       
         <div>
             <label for="producto14">Vainillas de 2kg:</label>
-            <input type="number" id="producto14" class="producto" >
+            <input type="number" id="producto14" class="producto">
         </div>
         <div>
             <label for="producto15">Galletas surtidas de 2.5kg:</label>
-            <input type="number" id="producto15" class="producto" >
+            <input type="number" id="producto15" class="producto">
         </div>
         <div>
             <label for="producto16">Galletas surtidas de 3kg:</label>
-            <input type="number" id="producto16" class="producto" >
+            <input type="number" id="producto16" class="producto">
         </div>
         <h1>sanguchito</h1>
-        <!-- Nuevos productos -->
         <div>
             <label for="producto17">Alfajor de maizena:</label>
-            <input type="number" id="producto17" class="producto" >
+            <input type="number" id="producto17" class="producto">
         </div>
         <div>
             <label for="producto18">Alfajor de miel:</label>
-            <input type="number" id="producto18" class="producto" >
+            <input type="number" id="producto18" class="producto">
         </div>
         <div>
             <label for="producto19">Glasiados:</label>
-            <input type="number" id="producto19" class="producto" >
+            <input type="number" id="producto19" class="producto">
         </div>
         <div>
-            <label for="producto20">sandwiches miga grande:</label>
-            <input type="number" id="producto20" class="producto" >
+            <label for="producto20">Chocolate:</label>
+            <input type="number" id="producto20" class="producto">
         </div>
-        <div style="width: 100%; text-align: center; ">
+        <div>
+            <label for="producto21">Sandwich de miga grande:</label>
+            <input type="number" id="producto21" class="producto">
+        </div>
+        <div>
+            <label for="producto22">Sandwich de miga chico:</label>
+            <input type="number" id="producto22" class="producto">
+        </div>
+        <div>
+            <label for="producto23">Sandwich de miga salame:</label>
+            <input type="number" id="producto23" class="producto">
+        </div>
+        <div>
+            <label for="producto24">Pebete (Jamón & Queso/Salame):</label>
+            <input type="number" id="producto24" class="producto">
+        </div>
+        <div>
+            <label for="producto25">Pebete Bondiola:</label>
+            <input type="number" id="producto25" class="producto">
+        </div>
+        <div>
+            <label for="producto26">Tiramisú:</label>
+            <input type="number" id="producto26" class="producto">
+        </div>
+        <div>
+            <label for="producto27">Flan:</label>
+            <input type="number" id="producto27" class="producto">
+        </div>
+        <div>
+            <label for="producto28">Chocotorta:</label>
+            <input type="number" id="producto28" class="producto">
+        </div>
+        <div>
+            <label for="producto29">Ensalada de frutas:</label>
+            <input type="number" id="producto29" class="producto">
+        </div>
+        <div>
+            <label for="producto30">Gelatina:</label>
+            <input type="number" id="producto30" class="producto">
+        </div>
+        <div style="width: 100%; text-align: center;">
             <input type="submit" value="Calcular Total">
         </div>
     </form>
 
     <div id="resultado" style="
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-">
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    ">
         <h2>Orden del pedido:</h2>
         <table id="tablaResultados" style="
-    margin: 0;
-">
+            margin: 0;
+        ">
             <tr>
                 <th>Producto</th>
                 <th>Cantidad</th>
@@ -200,17 +239,21 @@
 
             // Precios actualizados
             var precios = [
-                650, 650, 950, 950,1000, 1300, 1850, 3000, 3500, 6100, 
-                6900, 6000, 8000, 8400, 84000, 84000, 5600, 5600, 6200, 1400
+                650, 650, 950, 950, 1000, 1300, 1850, 3000, 3500, 6100, 
+                6900, 8000 , 6400, 8400, 8400, 5600, 5600, 5600, 6200, 7300,
+                1400, 1200, 1500, 1400, 1500, 1500, 1500, 1500, 1250, 850
             ];
             var productos = document.getElementsByClassName('producto');
             var nombresProductos = [
                 "Pan de pancho", "Pan de hamburguesa", "Pan lactal blanco", "Pan lactal negro", 
                 "Pan de arabe", "Prepizza", "Anis de 12", "Anis de 24", 
-                "Tostadas de 1kg", "Alfajor glaciado", "Alfajor de maizena/miel", 
-                "Roscas glaciadas", "Alfajor chocolate", "Vainillas de 2kg", 
+                "Tostadas de 1kg", "Alfajor glaciado", "Alfajor de maizena/miel", "Alfajor chocolate",
+                "Roscas glaciadas", "Vainillas de 2kg", 
                 "Galletas surtidas de 2.5kg", "Galletas surtidas de 3kg",
-                "Alfajor de maizena", "Alfajor de miel", "Glasiados", "Chocolate"
+                "Alfajor de maizena", "Alfajor de miel", "Glasiados", "Chocolate",
+                "Sandwich de miga grande", "Sandwich de miga chico", "Sandwich de miga salame",
+                "Pebete (Jamón & Queso/Salame)", "Pebete Bondiola", "Tiramisú", "Flan",
+                "Chocotorta", "Ensalada de frutas", "Gelatina"
             ];
             var total = 0;
 
@@ -237,4 +280,5 @@
             document.getElementById('total').innerText = 'El total de la compra es: $' + total.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); // Formato con separador de miles y 2 decimales
         });
     </script>
-</body
+</body>
+</html>
